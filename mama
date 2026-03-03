@@ -1,0 +1,144 @@
+index.html<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مفاجأة لأمي ❤️</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.container {
+    padding: 30px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    max-width: 500px;
+    margin: auto;
+    animation: fadeIn 2s ease-in-out;
+}
+
+h1 {
+    color: #e91e63;
+}
+
+button {
+    background: #e91e63;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #c2185b;
+    transform: scale(1.05);
+}
+
+#message {
+    display: none;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.gallery {
+    display: none;
+    margin-top: 30px;
+}
+
+.gallery img {
+    width: 90%;
+    max-width: 350px;
+    border-radius: 15px;
+    margin: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    transition: 0.5s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+/* قلوب */
+.heart {
+    position: fixed;
+    color: red;
+    font-size: 20px;
+    animation: float 5s linear infinite;
+}
+
+@keyframes float {
+    from {transform: translateY(100vh);}
+    to {transform: translateY(-10vh);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="card">
+        <h1>إلى أغلى أم في الدنيا ❤️</h1>
+        <p>عندي لك مفاجأة خاصة يا أمي...</p>
+        <button onclick="showSurprise()">اضغطي هنا يا أمي 💕</button>
+
+        <div id="message">
+            <p>
+            أمي الغالية 💖<br><br>
+            هذه بعض أجمل لحظاتنا معًا 📸<br>
+            أنتِ سبب سعادتي دائماً 🌸<br>
+            أحبك أكثر من أي شيء في الدنيا ❤️
+            </p>
+        </div>
+
+        <div class="gallery" id="gallery">
+            <img src="photo1.jpg">
+            <img src="photo2.jpg">
+            <img src="photo3.jpg">
+        </div>
+    </div>
+</div>
+
+<script>
+function showSurprise() {
+    document.getElementById("message").style.display = "block";
+    document.getElementById("gallery").style.display = "block";
+}
+
+// قلوب متحركة
+setInterval(function(){
+    let heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = "❤️";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (Math.random() * 20 + 10) + "px";
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 5000);
+
+}, 600);
+</script>
+
+</body>
+</html>
