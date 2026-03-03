@@ -2,4 +2,4 @@ photo1.jpg
 
 photo2.jpg
 
-photo3.jp
+photo3.jpg
